@@ -1,0 +1,38 @@
+{
+	"name": "discord-bot",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"dev": "nodemon --exec ts-node src/index.ts",
+		"build": "tsc",
+		"start": "node dist/index.js",
+		"lint": "eslint . --ext .ts",
+		"format": "prettier --write ."
+	},
+	"main": "dist/index.js",
+	"type": "module",
+	"author": "Jul0P",
+	"license": "MIT",
+	"keywords": [
+		"discord-bot",
+		"typescript",
+		"discord.js",
+		"node.js"
+	],
+	"dependencies": {
+		"discord.js": "^14.16.3",
+		"dotenv": "^16.4.7"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.2",
+		"eslint": "^9.17.0",
+		"nodemon": "^3.1.9",
+		"prettier": "^3.4.2",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.2"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"packageManager": "pnpm@9.10.0"
+}
