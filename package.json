@@ -1,24 +1,34 @@
 {
-    "name": "discord-bot",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "dev": "nodemon index.js",
-        "start": "node index.js",
-        "lint": "eslint .",
-        "format": "prettier --write ."
-    },
-    "keywords": [],
-    "author": "Jul0P",
-    "license": "MIT",
-    "dependencies": {
-        "discord.js": "^14.16.3",
-        "dotenv": "^16.4.7"
-    },
-    "devDependencies": {
-        "eslint": "^9.17.0",
-        "nodemon": "^3.1.9",
-        "prettier": "^3.4.2"
-    }
+	"name": "discord-bot",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"dev": "nodemon index.js",
+		"start": "node index.js",
+		"lint": "eslint .",
+		"format": "prettier --write ."
+	},
+	"main": "index.js",
+	"type": "module",
+	"author": "Jul0P",
+	"license": "MIT",
+	"keywords": [
+		"discord-bot",
+		"typescript",
+		"discord.js",
+		"node.js"
+	],
+	"dependencies": {
+		"discord.js": "^14.16.3",
+		"dotenv": "^16.4.7"
+	},
+	"devDependencies": {
+		"eslint": "^9.17.0",
+		"nodemon": "^3.1.9",
+		"prettier": "^3.4.2"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"packageManager": "pnpm@9.10.0"
 }
