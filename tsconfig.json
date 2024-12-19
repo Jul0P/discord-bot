@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"outDir": "dist",
+		"rootDir": "src",
+		"strict": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"module": "ESNext",
+		"target": "ESNext",
+		"resolveJsonModule": true
+	}
+}

@@ -4,17 +4,17 @@
 
 ## Features
 
--   Add an assignment
--   Delete an assignment
--   Update an assignment
--   Delete messages
--   Display bot status
--   Command documentation
+- Add an assignment
+- Delete an assignment
+- Update an assignment
+- Delete messages
+- Display bot status
+- Command documentation
 
 ## Prerequisites
 
--   [Node.js](https://nodejs.org/en)
--   [Discord Developer Portal](https://discord.com/developers/applications) to obtain a bot token
+- [Node.js](https://nodejs.org/en)
+- [Discord Developer Portal](https://discord.com/developers/applications) to obtain a bot token
 
 ## Installation
 
@@ -79,8 +79,8 @@ bun start
 
 ## Dependencies
 
--   `discord.js` : A powerful library for interacting with the Discord API
--   `dotenv` : Loads environment variables from a `.env` file
--   `nodemon` : Automatically restart the server when changes are detected
--   `typescript` : A superset of JavaScript that adds static types
--   `ts-node` : Execute TypeScript files directly without compiling them
+- `discord.js` : A powerful library for interacting with the Discord API
+- `dotenv` : Loads environment variables from a `.env` file
+- `nodemon` : Automatically restart the server when changes are detected
+- `typescript` : A superset of JavaScript that adds static types
+- `ts-node` : Execute TypeScript files directly without compiling them
