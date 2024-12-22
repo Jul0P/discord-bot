@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
-		"dev": "nodemon --exec ts-node src/index.ts",
+		"dev": "nodemon --exec node --no-warnings --loader ts-node/esm ./src/index.ts",
 		"build": "tsc",
 		"start": "node dist/index.js",
 		"lint": "eslint . --ext .ts",
