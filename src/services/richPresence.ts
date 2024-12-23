@@ -5,7 +5,10 @@ export default {
 	name: "ready",
 	execute(client: ExtendedClient) {
 		const memberCount = client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0);
-		client.user?.setPresence({
+
+		if (!client.user) return;
+
+		client.user.setPresence({
 			activities: [
 				{
 					name: `${memberCount} membres`,

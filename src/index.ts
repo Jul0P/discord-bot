@@ -1,6 +1,8 @@
 import { Client, Collection, GatewayIntentBits } from "discord.js";
 import dotenv from "dotenv";
+import loadEvents from "./loaders/loadEvents.ts";
 import loadServices from "./loaders/loadServices.ts";
+import loadSlashCommands from "./loaders/loadSlashCommands.ts";
 
 dotenv.config();
 
@@ -23,10 +25,14 @@ class ExtendedClient extends Client {
 const client = new ExtendedClient();
 
 client.once("ready", () => {
-	console.log(`${client.user?.tag} est en ligne !`);
+	if (!client.user) return;
+
+	console.log(`${client.user.tag} est en ligne !`);
 });
 
 loadServices(client);
+loadSlashCommands(client);
+loadEvents(client);
 
 client.login(process.env.TOKEN);
 
