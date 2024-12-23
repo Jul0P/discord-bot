@@ -8,7 +8,7 @@ export default async (client) => {
 		if (file.endsWith(".js")) {
 			const filePath = path.resolve("./src/services", file);
 			const { default: service } = await import(`file://${filePath}`);
-			client.on(service.name, service.execute.bind(null, client));
+			client.on(service.name, service.execute.bind(client));
 		}
 	}
 };
