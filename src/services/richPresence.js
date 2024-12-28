@@ -8,7 +8,7 @@ export default {
 			activities: [
 				{
 					name: `${memberCount} membres`,
-					type: ActivityType.Streaming,
+					type: ActivityType.Watching,
 					url: "https://twitch.tv/xxxxxx",
 					state: "Faites /doc pour voir les commandes disponibles",
 					details: `Date: ${new Date().toLocaleDateString()}`,
