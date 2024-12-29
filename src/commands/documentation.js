@@ -54,6 +54,11 @@ export default {
 					value: "Documentation du bot",
 					inline: false,
 				},
+				{
+					name: "/avatar `utilisateur`",
+					value: "Récupère l'avatar d'un utilisateur",
+					inline: false,
+				},
 			);
 
 		await interaction.reply({ embeds: [embed] });
