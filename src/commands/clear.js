@@ -5,6 +5,7 @@ export default {
 	data: new SlashCommandBuilder()
 		.setName("clear")
 		.setDescription("Commande pour supprimer des messages")
+		.setDMPermission(false)
 		.addIntegerOption((option) =>
 			option
 				.setName("nombre")

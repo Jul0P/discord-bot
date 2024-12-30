@@ -1,7 +1,7 @@
 import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 
 export default {
-	data: new SlashCommandBuilder().setName("doc").setDescription("Documentation du bot"),
+	data: new SlashCommandBuilder().setName("doc").setDescription("Documentation du bot").setDMPermission(false), // TODO: Allow the user to select a server they are a member of to display the /doc command in DM
 
 	async execute(interaction) {
 		const embed = new EmbedBuilder()
