@@ -4,6 +4,7 @@ export default {
 	data: new SlashCommandBuilder()
 		.setName("avatar")
 		.setDescription("Récupère l'avatar d'un utilisateur.")
+		.setDMPermission(true)
 		.addUserOption((option) =>
 			option
 				.setName("utilisateur")

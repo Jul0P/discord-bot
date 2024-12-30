@@ -1,13 +1,38 @@
-import { ChannelType, ChatInputCommandInteraction, PermissionsBitField, SlashCommandBuilder, TextChannel } from "discord.js";
+import {
+	ChannelType,
+	ChatInputCommandInteraction,
+	PermissionsBitField,
+	SlashCommandBuilder,
+	TextChannel,
+} from "discord.js";
 import { errorEmbed, successEmbed } from "../utils/embeds.js";
 
 export default {
 	data: new SlashCommandBuilder()
 		.setName("clear")
 		.setDescription("Commande pour supprimer des messages")
-		.addIntegerOption((option) => option.setName("nombre").setDescription("Nombre de messages à supprimer").setRequired(true).setMinValue(1).setMaxValue(100))
-		.addChannelOption((option) => option.setName("salon").setDescription("Salon dans lequel les messages doivent être supprimés").addChannelTypes(ChannelType.GuildText).setRequired(false))
-		.addUserOption((option) => option.setName("utilisateur").setDescription("Utilisateur dont les messages doivent être supprimés").setRequired(false)),
+		.setDMPermission(false)
+		.addIntegerOption((option) =>
+			option
+				.setName("nombre")
+				.setDescription("Nombre de messages à supprimer")
+				.setRequired(true)
+				.setMinValue(1)
+				.setMaxValue(100),
+		)
+		.addChannelOption((option) =>
+			option
+				.setName("salon")
+				.setDescription("Salon dans lequel les messages doivent être supprimés")
+				.addChannelTypes(ChannelType.GuildText)
+				.setRequired(false),
+		)
+		.addUserOption((option) =>
+			option
+				.setName("utilisateur")
+				.setDescription("Utilisateur dont les messages doivent être supprimés")
+				.setRequired(false),
+		),
 	userPermissions: [PermissionsBitField.Flags.ManageMessages],
 	botPermissions: [PermissionsBitField.Flags.ManageMessages],
 
@@ -66,7 +91,11 @@ export default {
 			}
 
 			await interaction.editReply({
-				embeds: [successEmbed(`Suppression de ${i} messages ${target ? `de <@${target.id}>` : ""} ${channel ? `dans <#${channel.id}>` : ""}`)],
+				embeds: [
+					successEmbed(
+						`Suppression de ${i} messages ${target ? `de <@${target.id}>` : ""} ${channel ? `dans <#${channel.id}>` : ""}`,
+					),
+				],
 			});
 		} catch (error) {
 			console.error(error);
