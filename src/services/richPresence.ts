@@ -3,7 +3,7 @@ import { ExtendedClient } from "../index.ts";
 
 export default {
 	name: "ready",
-	execute(client: ExtendedClient) {
+	execute(client: ExtendedClient): void {
 		const memberCount = client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0);
 
 		if (!client.user) return;
@@ -11,7 +11,7 @@ export default {
 		client.user.setPresence({
 			activities: [
 				{
-					name: `${memberCount} membres`,
+					name: `${memberCount} membres ss`,
 					type: ActivityType.Watching,
 					url: "https://twitch.tv/xxxxxx",
 					state: "Faites /doc pour voir les commandes disponibles",
