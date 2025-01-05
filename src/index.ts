@@ -36,9 +36,9 @@ client.once("ready", () => {
 	console.log(`${client.user.tag} est en ligne !`);
 });
 
+loadEvents(client);
 loadServices(client);
 loadSlashCommands(client);
-loadEvents(client);
 
 client.login(process.env.TOKEN);
 

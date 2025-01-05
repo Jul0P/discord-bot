@@ -13,7 +13,7 @@ export default async (client: ExtendedClient): Promise<void> => {
 		if (file.endsWith(".ts") || file.endsWith(".js")) {
 			const filePath = path.resolve("./src/services", file);
 			const { default: service } = (await import(`file://${filePath}`)) as { default: Service };
-			client.on(service.name, service.execute.bind(client));
+			service.execute(client);
 		}
 	}
 };

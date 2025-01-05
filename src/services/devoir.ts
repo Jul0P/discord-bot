@@ -16,7 +16,7 @@ interface Devoir {
 }
 
 export default {
-	name: "ready",
+	name: "devoir",
 	async execute(client: ExtendedClient, dateToProcess: string | null = null): Promise<void> {
 		if (
 			!(await fs
