@@ -5,7 +5,7 @@ import path from "path";
 const filePath = path.resolve("src/data/devoir.json");
 
 export default {
-	name: "ready",
+	name: "devoir",
 	async execute(client, dateToProcess = null) {
 		if (
 			!(await fs

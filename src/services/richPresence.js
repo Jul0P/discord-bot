@@ -1,7 +1,7 @@
 import { ActivityType } from "discord.js";
 
 export default {
-	name: "ready",
+	name: "richPresence",
 	execute(client) {
 		const memberCount = client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0);
 		client.user.setPresence({
